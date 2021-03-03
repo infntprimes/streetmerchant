@@ -24,7 +24,6 @@ import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
 import useProxy from '@doridian/puppeteer-page-proxy';
-import {config} from '../config';
 
 const inStock: Record<string, boolean> = {};
 
