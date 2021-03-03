@@ -57,6 +57,7 @@
     "puppeteer-extra-plugin-stealth": "^2.7.5",
     "pushover-notifications": "^1.2.2",
     "redis": "^3.0.2",
+    "rocketchat-api": "^1.0.5",
     "top-user-agents": "^1.0.21",
     "twilio": "^3.57.0",
     "twitch": "^4.4.12",
