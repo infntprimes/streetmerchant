@@ -24,6 +24,7 @@ import open from 'open';
 import {processBackoffDelay} from './model/helpers/backoff';
 import {sendNotification} from '../notification';
 import useProxy from '@doridian/puppeteer-page-proxy';
+import {config} from '../config';
 
 const inStock: Record<string, boolean> = {};
 
@@ -31,6 +32,9 @@ const linkBuilderLastRunTimes: Record<string, number> = {};
 
 function nextProxy(store: Store) {
   if (!store.proxyList) {
+    if (!config.proxy.address) {
+      logger.error("WARNING: NOT USING ROTATING OR STATIC PROXIES")
+    }
     return;
   }
 

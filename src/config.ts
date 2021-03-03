@@ -297,6 +297,15 @@ const notifications = {
     token: envOrString(process.env.PUSHOVER_TOKEN),
     username: envOrString(process.env.PUSHOVER_USER),
   },
+  rocketchat: {
+		username: envOrString(process.env.ROCKET_USERNAME),
+		password: envOrString(process.env.ROCKET_PASSWORD),
+		url: envOrString(process.env.ROCKET_URL),
+    roomName: envOrString(process.env.ROCKET_ROOM_NAME),
+    alias: envOrString(process.env.ROCKET_ALIAS, ""),
+		port: envOrNumber(process.env.ROCKET_PORT, 443),
+		useHttps: envOrBoolean(process.env.ROCKET_USE_HTTPS, true)		
+	},
   redis: {
     url: envOrString(process.env.REDIS_URL),
   },

@@ -17,9 +17,11 @@ import {sendTwitchMessage} from './twitch';
 import {updateRedis} from './redis';
 import {activateSmartthingsSwitch} from './smartthings';
 import {sendStreamLabsAlert} from './streamlabs';
+import {sendRocketchatMessage} from './rocketchat'
 
 export function sendNotification(link: Link, store: Store) {
   // Priority
+  sendRocketchatMessage(link,store)
   playSound();
   sendDiscordMessage(link, store);
   sendDesktopNotification(link, store);
